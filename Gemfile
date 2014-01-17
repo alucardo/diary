@@ -22,6 +22,7 @@ gem "rolify"
 gem 'haml'
 gem "haml-rails", "~> 0.5.3"
 gem 'compass-rails'
+gem 'noty-rails'
 
 group :development do
   gem 'better_errors'

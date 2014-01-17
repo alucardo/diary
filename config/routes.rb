@@ -1,8 +1,21 @@
 Daily::Application.routes.draw do
+
+  get 'reg' => 'home#register', :as => 'user_root'
+  root 'home#index'
+  devise_for :users, :path => "",
+              :path_names => {
+                  :sign_in => 'login',
+                  :sign_out => 'logout',
+                  :password => 'forgot_password',
+                  :confirmation => 'verification',
+                  :unlock => 'unblock',
+                  :registration => 'register',
+                  :sign_up => ''
+              }
+
   get "student/index"
   get "director/index"
-  root 'home#index'
-  devise_for :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -3,10 +3,10 @@ class HomeController < ApplicationController
   end
 
   def register
-    if current_user.admin?
-      redirect_to admin_main_path
-    else
-      redirect_to registered_main_path
+    if current_user.has_role? :admin
+      redirect_to director_index_path
+    #else
+    #  redirect_to registered_main_path
     end
   end
 
