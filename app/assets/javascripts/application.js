@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap.min
 //= require noty/packaged/jquery.noty.packaged.js
 
 

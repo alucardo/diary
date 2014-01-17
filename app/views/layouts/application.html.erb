@@ -12,10 +12,10 @@
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 <script>
     <% if notice.present? %>
-        noty({text: '<%= notice %>', timeout: 3000});
+        noty({text: '<%= notice %>', timeout: 3000, layout: 'BottomLeft'});
     <% end%>
     <% if alert.present? %>
-        noty({text: '<%= alert %>', type: 'error', timeout: 3000});
+        noty({text: '<%= alert %>', type: 'error', timeout: 3000, layout: 'BottomLeft'});
     <% end%>
 </script>
 </body>
