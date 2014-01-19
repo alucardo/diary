@@ -1,0 +1,2 @@
+module Director::GroupHelper
+end
