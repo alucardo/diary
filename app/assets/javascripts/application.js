@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require bootstrap.min
 //= require noty/packaged/jquery.noty.packaged.js
+//= require dataTables/jquery.dataTables
+//= require_tree ./director
 
 
 

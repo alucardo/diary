@@ -1,0 +1,13 @@
+- content_for :bread do
+  %li.current
+    Subjects
+
+%p
+  =link_to 'Add Subject', new_director_subject_path, :class => "btn btn-success pull-right"
+%p.clear
+%table#users_table.dt_table{"data-source" => director_subjects_path(format: "json")}
+  %thead
+    %tr
+      %th Name
+      %th
+  %tbody

@@ -1,0 +1,13 @@
+- content_for :bread do
+  %li.current
+    Groups
+
+%p
+  =link_to 'Add Group', new_director_classroom_path, :class => "btn btn-success pull-right"
+%p.clear
+%table#users_table.dt_table{"data-source" => director_classrooms_path(format: "json")}
+  %thead
+    %tr
+      %th Name
+      %th
+  %tbody

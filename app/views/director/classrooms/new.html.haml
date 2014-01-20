@@ -1,0 +1,6 @@
+- content_for :bread do
+  %li
+    =link_to 'Groups', director_classrooms_path
+  %li.current
+    New
+=render 'form', :url => director_classrooms_path(@classroom)

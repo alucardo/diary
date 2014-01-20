@@ -8,6 +8,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
@@ -23,6 +24,14 @@ gem 'haml'
 gem "haml-rails", "~> 0.5.3"
 gem 'compass-rails'
 gem 'noty-rails'
+gem 'simple_form'
+gem "select2-rails"
+gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+gem 'will_paginate'
+
+gem 'sidekiq'
+gem 'sinatra', require: false
+
 
 group :development do
   gem 'better_errors'
