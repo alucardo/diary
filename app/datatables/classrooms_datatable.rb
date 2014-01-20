@@ -20,7 +20,7 @@ class ClassroomsDatatable
     classrooms.map do |classroom|
       [
           classroom.name,
-          link_to(raw(' <i class="fa fa-pencil-square-o"></i> '), edit_director_classroom_path(classroom)) + link_to(raw(' <i class="fa fa-trash-o"></i> '), director_classroom_path(classroom), :method => :delete, data: { confirm: 'Are you sure?' })
+          link_to(raw('<i class="fa fa-search"></i>'), director_classroom_path(classroom)) + link_to(raw(' <i class="fa fa-pencil-square-o"></i> '), edit_director_classroom_path(classroom)) + link_to(raw(' <i class="fa fa-trash-o"></i> '), director_classroom_path(classroom), :method => :delete, data: { confirm: 'Are you sure?' })
       ]
     end
   end
@@ -30,7 +30,7 @@ class ClassroomsDatatable
   end
 
   def fetch_classrooms
-    classrooms = Classrooms.order("#{sort_column} #{sort_direction}")
+    classrooms = Classroom.order("#{sort_column} #{sort_direction}")
     classrooms = classrooms.page(page).per_page(per_page)
     if params[:sSearch].present?
       classrooms = classrooms.where("name like :search", search: "%#{params[:sSearch]}%")

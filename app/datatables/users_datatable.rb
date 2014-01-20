@@ -1,5 +1,5 @@
-class SubjectsDatatable
-  delegate :params, :h, :link_to, :raw, :edit_director_subject_path, :director_subject_path, :number_to_currency,  to: :@view
+class UsersDatatable
+  delegate :params, :h, :link_to, :raw, :edit_director_user_path, :director_user_path, :number_to_currency,  to: :@view
 
   def initialize(view)
     @view = view
@@ -13,7 +13,7 @@ class SubjectsDatatable
         aaData: data
     }
   end
-
+-
   private
 
   def data

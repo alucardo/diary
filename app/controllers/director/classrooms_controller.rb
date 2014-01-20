@@ -2,7 +2,7 @@ class Director::ClassroomsController < DirectorController
   before_action :set_classroom, only: [:show, :edit, :update, :destroy]
 
   def index
-    @classrooms = Classrooms.all
+    @classrooms = Classroom.all
     respond_to do |format|
       format.html
       format.json { render json: ClassroomsDatatable.new(view_context) }
@@ -14,12 +14,11 @@ class Director::ClassroomsController < DirectorController
   end
 
   def new
-    @classroom = Classrooms.new
+    @classroom = Classroom.new
   end
 
   def create
-    @classroom = Classrooms.new(classroom_params)
-
+    @classroom = Classroom.new(classroom_params)
     respond_to do |format|
       if @classroom.save
         format.html { redirect_to director_classrooms_path, notice: 'Group created' }
@@ -55,11 +54,11 @@ class Director::ClassroomsController < DirectorController
   private
 
   def set_classroom
-    @classroom = Classrooms.find(params[:id])
+    @classroom = Classroom.find(params[:id])
   end
 
   def classroom_params
-    params.require(:classrooms).permit(:name)
+    params.require(:classroom).permit(:name, :subject_ids => [])
   end
 
 end

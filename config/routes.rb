@@ -16,6 +16,7 @@ Daily::Application.routes.draw do
   namespace :director do
     resources :classrooms
     resources :subjects
+    resources :users
   end
 
 

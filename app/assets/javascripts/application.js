@@ -16,7 +16,12 @@
 //= require bootstrap.min
 //= require noty/packaged/jquery.noty.packaged.js
 //= require dataTables/jquery.dataTables
+//= require select2
 //= require_tree ./director
 
+$(document).ready(function() {
+    $(".s2").select2();
+
+});
 
 
