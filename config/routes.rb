@@ -13,6 +13,11 @@ Daily::Application.routes.draw do
                   :sign_up => ''
               }
 
+  namespace :director do
+    resource :tests
+  end
+
+
   get "student/index"
   get "director/index"
 
