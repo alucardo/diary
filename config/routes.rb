@@ -14,8 +14,12 @@ Daily::Application.routes.draw do
               }
 
   namespace :director do
-    resource :tests
+    resources :classrooms
+    resources :subjects
+    resources :users
   end
+
+
 
 
   get "student/index"

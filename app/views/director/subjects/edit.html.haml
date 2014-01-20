@@ -1,0 +1,6 @@
+- content_for :bread do
+  %li
+    =link_to 'Subjects', director_subjects_path
+  %li.current
+    Edit
+=render 'form', :url => director_subject_path(@subject)

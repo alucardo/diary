@@ -12,6 +12,10 @@
         .col-md-3
           =render 'layouts/sidebar_director'
         .col-md-9
+          %ol.breadcrumb
+            %li
+              =link_to 'Dashboard' , director_index_path
+            = yield :bread
           = yield
       .container
         .col-md-12

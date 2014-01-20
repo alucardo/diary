@@ -6,7 +6,7 @@
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/daily</jdbc-url>
       <user-name>root</user-name>
-      <user-password>dfd0dfcbdfdbdf9bdf98dfdddfd9dfd2</user-password>
+      <user-password>dfdadfc5dfc6dfc9dfc5dfcedfcf</user-password>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails daily: test" uuid="1aa27a6f-ef41-4e86-bdf2-4abd40363d73">
