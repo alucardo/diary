@@ -6,7 +6,22 @@ class Director::UsersController < DirectorController
     @subjects = Subject.all
     respond_to do |format|
       format.html
-      #format.json { render json: UserDatatable.new(view_context) }
+      format.json { render json: UsersDatatable.new(view_context) }
+    end
+  end
+
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.new(user_params)
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to director_users_path, notice: 'User created' }
+      else
+        format.html { render action: 'new', alert: 'Error while creating' }
+      end
     end
   end
 
@@ -18,6 +33,6 @@ class Director::UsersController < DirectorController
   end
 
   def user_params
-    params.require(:user).permit(:email)
+    params.require(:user).permit(:email, :password, :role_ids => [])
   end
 end

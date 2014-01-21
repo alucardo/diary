@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2428671585">
-    <data-source source="LOCAL" name="Rails daily: development" uuid="68a657db-32b9-4c01-8527-b22dcb963208">
+  <component name="DataSourceManagerImpl" format="xml" hash="406658624">
+    <data-source source="LOCAL" name="Rails daily: development" uuid="abe3db40-2807-4d2a-b068-701534c31a9f">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/daily</jdbc-url>
       <user-name>root</user-name>
-      <user-password>dfdadfc5dfc6dfc9dfc5dfcedfcf</user-password>
+      <user-password>dfd0dfcbdfdbdf9bdf98dfdddfd9dfd2</user-password>
       <libraries />
     </data-source>
-    <data-source source="LOCAL" name="Rails daily: test" uuid="1aa27a6f-ef41-4e86-bdf2-4abd40363d73">
+    <data-source source="LOCAL" name="Rails daily: test" uuid="06cf3eb6-abc9-4b3c-bf4b-b86f93825e8b">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>

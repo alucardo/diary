@@ -3,7 +3,7 @@
     Users
 
 %p
-  =link_to 'Add User', '#', :class => "btn btn-success pull-right"
+  =link_to 'Add User', new_director_user_path, :class => "btn btn-success pull-right"
 %p.clear
 %table#users_table.dt_table{"data-source" => director_users_path(format: "json")}
   %thead
