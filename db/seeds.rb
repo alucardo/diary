@@ -7,10 +7,16 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.destroy_all
+Role.destroy_all
+
+
+Role.create(:name => "director")
+Role.create(:name => "teacher")
+Role.create(:name => "student")
 
 u = User.new(
     :email => "przemyslaw.olesinski@polcode.net",
     :password => 'zaq12wsx'
 )
-u.add_role :admin
+u.add_role :director
 u.save!
