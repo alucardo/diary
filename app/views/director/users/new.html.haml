@@ -1,0 +1,6 @@
+- content_for :bread do
+  %li
+    =link_to 'Users', director_users_path
+  %li.current
+    New
+=render 'form', :url => director_users_path(@user)
