@@ -15,7 +15,7 @@ class UsersDatatable
   end
 
 
-  private
+  protected
 
   def data
     users.map do |user|
@@ -39,7 +39,7 @@ class UsersDatatable
     users = User.order("#{sort_column} #{sort_direction}")
     users = users.page(page).per_page(per_page)
     if params[:sSearch].present?
-      subjects = users.where("email like :search", search: "%#{params[:sSearch]}%")
+      users = users.where("email like :search", search: "%#{params[:sSearch]}%")
     end
     users
   end

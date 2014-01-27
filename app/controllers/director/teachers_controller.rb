@@ -3,10 +3,10 @@ class Director::TeachersController < DirectorController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @teachers = User.all
+    @teachers = User.teachers
     respond_to do |format|
       format.html
-      format.json { render json: UsersDatatable.new(view_context) }
+      format.json { render json: TeachersDatatable.new(view_context) }
     end
   end
 

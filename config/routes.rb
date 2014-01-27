@@ -17,6 +17,7 @@ Daily::Application.routes.draw do
     resources :classrooms
     resources :subjects
     resources :users
+    resources :teachers
   end
 
 
