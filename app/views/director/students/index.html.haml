@@ -1,0 +1,14 @@
+- content_for :bread do
+  %li.current
+    Students
+
+%p
+  =link_to 'Add Students', new_director_user_path, :class => "btn btn-success pull-right"
+%p.clear
+%table#users_table.dt_table{"data-source" => director_students_path(format: "json")}
+  %thead
+    %tr
+      %th E-mail
+      %th Role
+      %th
+  %tbody
