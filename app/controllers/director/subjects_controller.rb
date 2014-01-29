@@ -1,6 +1,8 @@
 class Director::SubjectsController < DirectorController
 
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
+  before_action :check_teacher, only: [:new]
+
 
   def index
     @subjects = Subject.all
@@ -60,7 +62,15 @@ class Director::SubjectsController < DirectorController
   end
 
   def subject_params
-    params.require(:subject).permit(:name)
+    params.require(:subject).permit(:name, :teacher_id)
+  end
+
+  def check_teacher
+    if User.teachers.count < 1
+
+      redirect_to director_teachers_path, alert: 'Add Teacher first'
+      return
+    end
   end
 
 

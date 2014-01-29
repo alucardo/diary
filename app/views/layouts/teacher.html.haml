@@ -1,0 +1,30 @@
+!!!
+%html
+  %head
+    %title current_user.email
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    = render 'layouts/top_teacher'
+    .container
+      .container
+        .col-md-3
+          =render 'layouts/sidebar_teacher'
+        .col-md-9
+          %ol.breadcrumb
+            %li
+              =link_to 'Dashboard' , director_index_path
+            = yield :bread
+          = yield
+      .container
+        .col-md-12
+          =render 'layouts/footer'
+
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    -if notice.present?
+      :javascript
+        noty({text: '#{notice}', timeout: 3000, layout: 'bottomLeft', type: 'success'});
+    -if alert.present?
+      :javascript
+        noty({text: '#{alert}', timeout: 3000, layout: 'bottomLeft', type: 'error'});

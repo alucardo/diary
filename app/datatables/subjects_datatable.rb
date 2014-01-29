@@ -20,6 +20,11 @@ class SubjectsDatatable
     subjects.map do |subject|
       [
           subject.name,
+          if subject.teacher.present?
+            subject.teacher.email
+          else
+            ''
+          end,
           link_to(raw(' <i class="fa fa-pencil-square-o"></i> '), edit_director_subject_path(subject)) + link_to(raw(' <i class="fa fa-trash-o"></i> '), director_subject_path(subject), :method => :delete, data: { confirm: 'Are you sure?' })
       ]
     end

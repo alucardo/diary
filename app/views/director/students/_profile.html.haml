@@ -1,0 +1,12 @@
+%p
+%table.table.table-bordered
+  %tbody
+    %tr
+      %td ID
+      %td= @user.id
+    %tr
+      %td E-mail
+      %td= @user.email
+    %tr
+      %td Registered at
+      %td= @user.created_at.to_s(:db)

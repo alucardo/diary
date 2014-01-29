@@ -58,7 +58,7 @@ class Director::ClassroomsController < DirectorController
   end
 
   def classroom_params
-    params.require(:classroom).permit(:name, :subject_ids => [])
+    params.require(:classroom).permit(:name, :subject_ids => [], :user_ids => [])
   end
 
 end

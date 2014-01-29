@@ -47,6 +47,9 @@ class Director::StudentsController < DirectorController
     end
   end
 
+  def show
+
+  end
 
   private
 

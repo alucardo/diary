@@ -1,0 +1,21 @@
+- content_for :bread do
+  %li
+    =link_to 'Students', director_students_path
+  %li.current
+    = @user.email
+
+%ul.nav.nav-tabs.nav-justified
+  %li.active
+    %a{"data-toggle" => "tab", href: "#profile"} Profile
+  %li
+    %a{"data-toggle" => "tab", href: "#classroom"} Classrooms
+  %li
+    %a{"data-toggle" => "tab", href: "#subject"} Subjects
+  %li
+    %a{"data-toggle" => "tab", href: "#gread"} Greads
+/ Tab panes
+.tab-content
+  #profile.tab-pane.active= render 'profile'
+  #classroom.tab-pane= render 'classroom'
+  #subject.tab-pane= render 'subjects'
+  #gread.tab-pane ...4

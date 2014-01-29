@@ -1,0 +1,15 @@
+%p
+%table.table.table-bordered
+  %thead
+    %tr
+      %th ID
+      %th Name
+      %th
+  %tbody
+    - @user.classrooms.each do |classroom|
+      %tr
+        %td
+          = classroom.id
+        %td
+          = classroom.name
+        %td

@@ -1,0 +1,20 @@
+%p
+%table.table.table-bordered
+  %thead
+    %tr
+      %th ID
+      %th Name
+      %th Teacher
+      %th
+  %tbody
+    - @user.classrooms.each do |classroom|
+      - classroom.subjects.each do |subject|
+        %tr
+          %td= subject.id
+          %td= subject.name
+          - if subject.teacher.present?
+            %td= subject.teacher.email
+          - else
+            %td
+          %td
+

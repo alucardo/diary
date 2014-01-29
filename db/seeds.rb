@@ -20,3 +20,21 @@ u = User.new(
 )
 u.add_role :director
 u.save!
+
+t = User.new(
+    :email => "teacher@example.com",
+    :password => 'zaq12wsx'
+)
+t.add_role :teacher
+t.save!
+
+
+st = User.new(
+    :email => "student@example.com",
+    :password => 'zaq12wsx'
+)
+st.add_role :student
+st.save!
+
+
+s = Subject.create(:name => 'Ang', :teacher => t)

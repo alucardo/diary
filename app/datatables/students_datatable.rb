@@ -1,5 +1,5 @@
 class StudentsDatatable < UsersDatatable
-  delegate  :edit_director_teacher_path, :director_teacher_path, to: :@view
+  delegate  :edit_director_student_path, :director_student_path, to: :@view
 
 
 
@@ -24,7 +24,7 @@ class StudentsDatatable < UsersDatatable
           else
             ''
           end ,
-          link_to(raw(' <i class="fa fa-pencil-square-o"></i> '), edit_director_teacher_path(user)) + link_to(raw(' <i class="fa fa-trash-o"></i> '), director_teacher_path(user), :method => :delete, data: { confirm: 'Are you sure?' })
+          link_to(raw('<i class="fa fa-search"></i>'), director_student_path(user) ) + link_to(raw(' <i class="fa fa-pencil-square-o"></i> '), edit_director_student_path(user)) + link_to(raw(' <i class="fa fa-trash-o"></i> '), director_student_path(user), :method => :delete, data: { confirm: 'Are you sure?' })
       ]
     end
   end
