@@ -1,0 +1,15 @@
+- content_for :bread do
+  %li.current
+    Classrooms
+
+
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th
+  %tbody
+    - @classrooms.each do |c|
+      %tr
+        %td= c.name
+        %td= link_to raw('<i class="fa fa-search"></i>'), teacher_classroom_path(c)

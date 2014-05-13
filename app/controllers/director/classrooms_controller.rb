@@ -29,7 +29,6 @@ class Director::ClassroomsController < DirectorController
   end
 
   def edit
-
   end
 
   def update
@@ -58,7 +57,7 @@ class Director::ClassroomsController < DirectorController
   end
 
   def classroom_params
-    params.require(:classroom).permit(:name, :subject_ids => [], :user_ids => [])
+    params.require(:classroom).permit(:name, :teacher_id, :subject_ids => [], :user_ids => [])
   end
 
 end

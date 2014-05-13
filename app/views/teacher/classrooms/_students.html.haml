@@ -1,0 +1,12 @@
+%table.table.table-hover
+  %thead
+    %tr
+      %th ID
+      %th Name
+      %th
+  %tbody
+    - students.each do |s|
+      %tr
+        %td= s.user.id
+        %td= s.user.email
+        %th= link_to raw('<i class="fa fa-search"></i>'), '#'

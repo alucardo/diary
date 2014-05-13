@@ -1,5 +1,7 @@
 %ul.nav.nav-pills.nav-stacked
   %li{:class => active_link_to(teacher_index_path)}
     =link_to 'Dashboard', teacher_index_path
-
-
+  %li{:class => active_link_to(teacher_subjects_path)}
+    =link_to 'Subject', teacher_subjects_path
+  %li{:class => active_link_to(teacher_classrooms_path)}
+    =link_to 'Classrooms', teacher_classrooms_path

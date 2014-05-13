@@ -1,16 +1,15 @@
 - content_for :bread do
   %li
-    =link_to 'Groups', director_classrooms_path
+    = link_to 'Classrooms', teacher_classrooms_path
   %li.current
-    =@classroom.name
+    = @classroom.name
+
 
 %ul.nav.nav-tabs
   %li
     %a{"data-toggle" => "tab", href: "#home"} Home
   %li
     %a{"data-toggle" => "tab", href: "#subject"} Subject
-  %li
-    %a{"data-toggle" => "tab", href: "#messages"} Teachers
   %li
     %a{"data-toggle" => "tab", href: "#settings"} Students
 / Tab panes
@@ -21,7 +20,5 @@
     =@classroom.name
   #subject.tab-pane
     = render 'subjects', :subjects => @classroom.subjects
-  #messages.tab-pane
-    = render 'teachers', :teachers => @classroom.teacher
   #settings.tab-pane
     = render 'students', :students => @classroom.students

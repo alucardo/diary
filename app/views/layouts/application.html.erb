@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-application
+<%= render 'home/nav' %>
 <%= yield %>
+<%= render 'home/footer' %>
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 <script>
     <% if notice.present? %>

@@ -55,7 +55,7 @@ class Director::SubjectsController < DirectorController
 
 
 
-  private
+  protected
 
   def set_subject
     @subject = Subject.find(params[:id])
