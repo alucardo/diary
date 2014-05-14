@@ -17,9 +17,7 @@
               =link_to 'Dashboard' , director_index_path
             = yield :bread
           = yield
-      .container
-        .col-md-12
-          =render 'layouts/footer'
+    = render 'layouts/footer'
 
     = javascript_include_tag "application", "data-turbolinks-track" => true
     -if notice.present?

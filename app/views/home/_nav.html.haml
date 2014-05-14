@@ -6,7 +6,7 @@
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
-    %a.navbar-brand{href: "#" } School Daily
+    %a.navbar-brand{href: "#" } School Diary
   / Collect the nav links, forms, and other content for toggling
   #bs-example-navbar-collapse-1.collapse.navbar-collapse
     %ul.nav.navbar-nav.navbar-right
@@ -42,6 +42,8 @@
                         = f.input_field :password, :label => false, :placeholder => 'Password', :class => 'form-control'
                     %div
                       = f.submit "Sign in", :class => 'btn btn-warning'
+                    %div
+                      = link_to "I've forgotten my password", new_user_password_path
                 %hr
                   .member
                     %p Not a member yet?

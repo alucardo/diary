@@ -16,3 +16,4 @@
 /tmp
 /.idea/*
 /config/*.yml
+/config/initializers/omniauth.rb

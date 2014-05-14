@@ -28,6 +28,7 @@ gem 'simple_form'
 gem "select2-rails"
 gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
 gem 'will_paginate'
+gem 'omniauth-facebook'
 
 gem 'sidekiq'
 gem 'sinatra', require: false
