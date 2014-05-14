@@ -12,8 +12,38 @@
     %ul.nav.navbar-nav.navbar-right
       %li
         = link_to 'Home', root_path
+      %li 
+        = link_to 'About', root_path
+      - unless current_user.present?
+        %li
+          = link_to 'Join', new_user_registration_path
       %li
         - if current_user.present?
           = link_to 'logout', destroy_user_session_path, :method => :delete
         -else
-          = link_to 'Log in', new_user_session_path
+          %li.dropdown.login
+            %a.dropdown-toggle{"data-toggle" => "dropdown"} Login
+            %ul.dropdown-menu
+              %li
+                .login-fb
+                  %a{:href => "#"} 
+                    <i class="fa fa-facebook-square"></i> 
+                    %p Connect with Facebook
+
+                .break
+                  %p or
+                .login-device
+                  = simple_form_for(:user,  :url => user_session_path, :html => {:class => 'form-horizontal'}) do |f| 
+                    .form-group
+                      .col-sm-12
+                        = f.input_field :email, :autofocus => true, :label => false, :placeholder => "Email", :class => 'form-control'
+                    .form-group
+                      .col-sm-12
+                        = f.input_field :password, :label => false, :placeholder => 'Password', :class => 'form-control'
+                    %div
+                      = f.submit "Sign in", :class => 'btn btn-warning'
+                %hr
+                  .member
+                    %p Not a member yet?
+                    %a{:href=> '#'} Sign-up in 30 seconds
+

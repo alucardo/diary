@@ -1,2 +1,38 @@
 %footer
+  .newsletter
+    %h5 Subscribe to our Newsletter
+    %form.form-inline{:role => "form"}
+      .form-group
+        %input.form-control{:type => 'text'}
+      %input.btn.btn-warning{:type => 'submit', :value => 'SUBSCRIBE'}
+  %hr
+  .container
+    .row
+      .col-md-3.col-sm-3
+        %h4 About
+        %ul
+          %li= link_to 'About Us', '#'
+          %li= link_to 'Terms', '#'
+          %li= link_to 'Register', '#'
+          %li= link_to 'Other Projects', '#'
+      .col-md-3.col-sm-3
+        %h4 Browse
+        %ul
+          %li= link_to 'Prices', '#'
+          %li= link_to 'Contacts', '#'
+          %li= link_to 'Blog', '#'
+          %li= link_to 'Web site', '#'
+      .col-md-3.col-sm-3
+        %h4 Video Lessons
+        %ul
+          %li= link_to 'Register', '#'
+          %li= link_to 'First class', '#'
+      .col-md-3.col-sm-3.social
+        .row
+          = link_to raw('<i class="fa fa-facebook-square"></i>'), '#'
+          = link_to raw('<i class="fa fa-google-plus-square"></i>'), '#'
+          = link_to raw('<i class="fa fa-linkedin-square"></i>'), '#'
+        .row
+          = link_to 'przemyslaw.olesinski@polcode.net', '#'
+          = link_to 'przemyslawolesinski.pl', 'http://www.przemyslawolesinski.pl'
   %p.copy Copyright 2014 Przemysław Olesiński
