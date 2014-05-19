@@ -54,7 +54,6 @@ group :development, :test do
   gem 'forgery'
   gem 'watchr'
   gem 'fakeweb'
-  gem 'net-http-spy'
   gem 'cucumber-rails', :require => false
   gem 'capybara'
   gem "database_cleaner"

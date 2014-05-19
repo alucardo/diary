@@ -26,7 +26,7 @@
             %ul.dropdown-menu
               %li
                 .login-fb
-                  %a{:href => "#"} 
+                  = link_to user_omniauth_authorize_path(:facebook) do 
                     <i class="fa fa-facebook-square"></i> 
                     %p Connect with Facebook
 
