@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(version: 20140519072059) do
     t.integer "subject_id"
   end
 
-  create_table "create_greads", force: true do |t|
+  create_table "greads", force: true do |t|
     t.integer  "gread"
-    t.integer  "user_id"
+    t.integer  "student_id"
     t.integer  "subject_id"
     t.datetime "created_at"
     t.datetime "updated_at"

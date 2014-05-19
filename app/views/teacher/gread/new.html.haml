@@ -1,0 +1,11 @@
+- content_for :bread do
+  %li
+    =link_to 'Subjects', teacher_subjects_path
+  %li.current Add gread
+= simple_form_for @gread, :url => teacher_subject_gread_index_path(:subject_id => params[:subject_id], :student_id => params[:student_id]), :html => { :class => "form-horizontal", :role => "form"} do |f|
+  .form-group
+    = f.label :gread, class: "col-sm-2 control-label"
+    = f.input :gread, :label => false, wrapper_html: { class: "col-sm-10"}, input_html: { class: "form-control"}
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      = f.submit 'Save', :class => "btn btn-default"

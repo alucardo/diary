@@ -7,6 +7,7 @@ class Teacher::SubjectsController < TeacherController
   end
 
   def show
+
     @students = @subject.classrooms.first.students
   end
 

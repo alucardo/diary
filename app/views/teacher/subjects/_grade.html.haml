@@ -7,9 +7,16 @@
       %th ID
       %th Name
       %th Grade
+      %th
   %tbody
     - students.each do |s|
       %tr
         %td= s.user.id
         %td= s.user.email
-        %th
+        %th= s.get_graeds_from_subject(subject.id)
+        %th= link_to raw('<i class="fa fa-plus-square"></i>'), new_teacher_subject_gread_path(:subject_id=> subject.id, :student_id => s.id)
+
+.export
+  = link_to 'CSV', '#'
+  |
+  = link_to 'PDF', '#'

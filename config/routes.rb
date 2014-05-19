@@ -18,7 +18,9 @@ Daily::Application.routes.draw do
   end
 
   namespace :teacher do
-    resources :subjects, :only => [:index, :show]
+    resources :subjects, :only => [:index, :show] do
+      resources :gread, :except => [:index]
+    end
     resources :classrooms, :only => [:index, :show]
   end
 
