@@ -182,7 +182,11 @@ GEM
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
     orm_adapter (0.5.0)
+    pdf-core (0.2.5)
     polyglot (0.3.3)
+    prawn (1.0.0)
+      pdf-core (~> 0.2.2)
+      ttfunk (~> 1.1.1)
     pry (0.9.12.4)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -284,6 +288,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    ttfunk (1.1.1)
     turbolinks (2.2.0)
       coffee-rails
     tzinfo (0.3.38)
@@ -329,6 +334,7 @@ DEPENDENCIES
   mysql2
   noty-rails
   omniauth-facebook
+  prawn
   pry
   rails (= 4.0.2)
   rolify

@@ -17,6 +17,6 @@
         %th= link_to raw('<i class="fa fa-plus-square"></i>'), new_teacher_subject_gread_path(:subject_id=> subject.id, :student_id => s.id)
 
 .export
-  = link_to 'CSV', '#'
+  = link_to 'CSV', teacher_subject_path(@subject, :format => :pdf)
   |
-  = link_to 'PDF', '#'
+  = link_to 'PDF', teacher_subject_path(@subject, :format => :pdf)

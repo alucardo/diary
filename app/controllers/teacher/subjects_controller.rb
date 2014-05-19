@@ -9,6 +9,17 @@ class Teacher::SubjectsController < TeacherController
   def show
 
     @students = @subject.classrooms.first.students
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = SubjectPdf.new(@subject, @students)
+        send_data pdf.render, filename: "#{@subject.name}.pdf",
+                              type: "application/pdf",
+                              disposition: "inline"
+      end
+    end
+
   end
 
   protected

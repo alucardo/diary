@@ -32,6 +32,7 @@ gem 'omniauth-facebook'
 
 gem 'sidekiq'
 gem 'sinatra', require: false
+gem 'prawn'
 
 
 group :development do
