@@ -9,5 +9,6 @@ class Student < ActiveRecord::Base
     g.map(&:gread).join(', ')
   end
 
+  
 
 end

@@ -1,20 +1,21 @@
 !!!
 %html
   %head
-    %title current_user.email
+    %title Daily
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    = render 'layouts/top_teacher'
+    = render 'layouts/top_director'
     .container
       .container
         .col-md-3
-          =render 'layouts/sidebar_teacher'
+          =render 'layouts/sidebar_student'
         .col-md-9
           %ol.breadcrumb
             %li
-              =link_to 'Dashboard' , teacher_index_path
+              =link_to 'Dashboard' , student_index_path
             = yield :bread
           = yield
-    =render 'layouts/backend_footer'
+    = render 'layouts/backend_footer'
+

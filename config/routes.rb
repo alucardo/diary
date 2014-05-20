@@ -24,7 +24,9 @@ Daily::Application.routes.draw do
     resources :classrooms, :only => [:index, :show]
   end
 
-
+  namespace :student do
+    resources :subjects, :only => [:index, :show]
+  end
 
 
   get "student/index"

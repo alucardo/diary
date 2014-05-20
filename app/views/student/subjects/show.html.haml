@@ -1,0 +1,11 @@
+- content_for :bread do
+  %li
+    = link_to 'Subjects', student_subjects_path
+  %li.current
+    = @subject.name
+
+%p 
+  Greads: 
+  = @greads.join(', ')
+
+

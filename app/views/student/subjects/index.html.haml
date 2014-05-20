@@ -1,0 +1,16 @@
+- content_for :bread do
+  %li.current Subjects
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th ID
+      %th Name
+      %th
+  %tbody
+    - @subjects.each do |subject|
+      %tr
+        %td= subject.id
+        %td= subject.name
+        %td= link_to raw('<i class="fa fa-search"></i>'), student_subject_path(subject)
+

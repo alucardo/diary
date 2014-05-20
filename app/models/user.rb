@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :students
   has_many :classrooms, through: :students
   has_many :greads
-
+  has_many :subjects
 
   def self.directors
     with_role(:director)

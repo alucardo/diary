@@ -1,6 +1,11 @@
 .container
   .col-md-8.col-md-offset-2
     %h2 Log In
+    .example
+      %p Example login:
+      %p director@example.com | zaq12wsx
+      %p teacher@example.com | zaq12wsx
+      %p student@example.com | zaq12wsx
     = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :method => :post, :class => 'form-horizontal', :role => 'form'}) do |f|
       = devise_error_messages!
       .form-group
