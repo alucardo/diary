@@ -18,9 +18,8 @@ class Teacher::SubjectsController < TeacherController
                               type: "application/pdf",
                               disposition: "inline"
       end
-      format.csv 
+      format.csv
     end
-
   end
 
   protected

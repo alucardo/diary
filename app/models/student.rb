@@ -8,7 +8,4 @@ class Student < ActiveRecord::Base
     g = self.greads.where(:subject_id => subject_id)
     g.map(&:gread).join(', ')
   end
-
-  
-
 end

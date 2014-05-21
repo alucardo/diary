@@ -9,7 +9,7 @@ class Student::SubjectsController < StudentController
 
   def show
     @subject = Subject.find(params[:id])
-    @greads = @subject.greads.where(:student_id => @student.id).map(&:gread)  
+    @greads = @subject.greads.where(:student_id => @student.id).map(&:gread)
   end
 
   protected

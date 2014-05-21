@@ -63,3 +63,5 @@ group :development, :test do
   gem 'launchy'
   gem 'email_spec'
 end
+
+gem 'simplecov', :require => false, :group => :test

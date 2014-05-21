@@ -11,9 +11,9 @@ Daily::Application.routes.draw do
 
   namespace :director do
     resources :classrooms
-    resources :subjects
-    resources :users
-    resources :teachers
+    resources :subjects, except [:show]
+    resources :users, except [:show]
+    resources :teachers, except [:show]
     resources :students
   end
 

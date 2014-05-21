@@ -1,4 +1,4 @@
 <%  @students.each do |s| %>
-	<%= s.user.id %> , <%= s.user.email %>, <%= s.get_graeds_from_subject(@subject.id) %>
+	<%= s.user.id %> , <%= s.user.email %>,  <%= s.get_graeds_from_subject(@subject.id).to_s %>
 <% end %>
 

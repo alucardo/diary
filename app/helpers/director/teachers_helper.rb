@@ -1,2 +1,0 @@
-module Director::TeachersHelper
-end

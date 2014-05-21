@@ -10,9 +10,6 @@ class User < ActiveRecord::Base
   has_many :greads
   has_many :subjects
 
-  def self.directors
-    with_role(:director)
-  end
 
   def self.teachers
     with_role(:teacher)

@@ -10,10 +10,8 @@
   / Collect the nav links, forms, and other content for toggling
   #bs-example-navbar-collapse-1.collapse.navbar-collapse
     %ul.nav.navbar-nav.navbar-right
-      %li
-        = link_to 'Home', root_path
-      %li 
-        = link_to 'About', root_path
+      %li= link_to 'Home', root_path
+      %li= link_to 'About', root_path
       - unless current_user.present?
         %li
           = link_to 'Join', new_user_registration_path
@@ -25,15 +23,14 @@
             %a.dropdown-toggle{"data-toggle" => "dropdown"} Login
             %ul.dropdown-menu
               %li
-                .login-fb
-                  = link_to user_omniauth_authorize_path(:facebook) do 
-                    <i class="fa fa-facebook-square"></i> 
-                    %p Connect with Facebook
+                .login-fb= link_to user_omniauth_authorize_path(:facebook) do
+                  <i class="fa fa-facebook-square"></i>
+                  %p Connect with Facebook
 
                 .break
                   %p or
                 .login-device
-                  = simple_form_for(:user,  :url => user_session_path, :html => {:class => 'form-horizontal'}) do |f| 
+                  = simple_form_for(:user,  :url => user_session_path, :html => {:class => 'form-horizontal'}) do |f|
                     .form-group
                       .col-sm-12
                         = f.input_field :email, :autofocus => true, :label => false, :placeholder => "Email", :class => 'form-control'
